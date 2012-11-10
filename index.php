@@ -36,7 +36,7 @@
 					seriesCpu.addPoint([x, parseFloat(obj.cpu*100)], true, true);
 					var seriesTemp = temperatureChart.series[0];
 					seriesTemp.addPoint([x, parseFloat(obj.temp)], true, true);
-					console.log("Cpu", obj, x);
+					console.log(1, obj);
 				});
 			}	
 		</script>
