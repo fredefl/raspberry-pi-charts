@@ -65,7 +65,7 @@ $(document).ready(function() {
 				for (i = -19; i <= 0; i++) {
 				data.push({
 					x: i,
-					y: parseFloat(obj.cpu*100)
+					y: parseFloat(obj.cpu)
 				});
 				}
 

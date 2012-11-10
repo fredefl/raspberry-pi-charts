@@ -1,9 +1,4 @@
 <?php
-function getServerLoad()
-{
-	$load = explode(' ', `cat /proc/loadavg`);
-	return $load[0];
-}
-echo '{"cpu":"' . trim(getServerLoad(), ',') . '","temp":"' . preg_replace('/[^0-9.]/', '', `/opt/vc/bin/vcgencmd measure_temp`) . '"}';
+echo '{"cpu":"' . preg_replace('/[^0-9.]/', '', `ps aux|awk 'NR > 0 { s +=$3 }; END {print "cpu %",s}'`) . '","temp":"' . preg_replace('/[^0-9.]/', '', `/opt/vc/bin/vcgencmd measure_temp`) . '"}';
 
 ?>

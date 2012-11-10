@@ -40,7 +40,7 @@
 					var obj = JSON.parse(data);
 					x++;
 					var seriesCpu = cpuChart.series[0];
-					seriesCpu.addPoint([x, parseFloat(obj.cpu*100)], true, true);
+					seriesCpu.addPoint([x, parseFloat(obj.cpu)], true, true);
 					var seriesTemp = temperatureChart.series[0];
 					seriesTemp.addPoint([x, parseFloat(obj.temp)], true, true);
 					console.log(1, obj);
